@@ -17,6 +17,15 @@ How to select only character variables with SQL
     https://tinyurl.com/pxtj96sy
     https://stackoverflow.com/questions/66478570/how-to-select-only-char-variables-with-proc-sql-in-sas-enterprise-guide
 
+    Simplification by Mark
+    proc sql;
+      create table want
+        as select *
+        from sashelp.class (keep=_character_);
+    quit;
+
+    Keintz, Mark
+    Mark Keintz <mkeintz@OUTLOOK.COM>
 
     *_                   _
     (_)_ __  _ __  _   _| |_
